@@ -1,0 +1,568 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Montserrat:wght@200;300;400&family=Spectral:wght@200&family=Teko&display=swap');
+
+:root {
+    --Lato : 'Lato', sans-serif;
+    --Mont: 'Montserrat', sans-serif;
+    --Spec: 'Spectral', serif;
+    --Teko: 'Teko', sans-serif;
+    --primary: #e8f2e4;
+    --light: #F8F8F8;
+    --dark: #252525;
+    }
+
+.bg-primary{
+    background-color: #FFFFFF;
+}    
+
+    h1,
+h2,
+.h1,
+.h2,
+.fw-bold {
+    font-weight: 200 ;
+    font-family: var(--Spec);
+    color: black;
+}
+
+h3,
+h4,
+.h3,
+.h4,
+.fw-medium {
+    font-weight: 200;
+    font-family: var(--Mont);
+}
+
+h5,
+h6,
+.h5,
+.h6,
+.fw-normal {
+    font-weight: 400 ;
+}
+.mb-5{
+    font-family: var(--Spec);
+    color:black;
+    font-weight: bold;
+}
+
+.mb-2{
+    color: black;
+    font-family: var(--Mont);
+    font-weight: 200;
+    text-decoration: none;
+}
+
+.mb-4{
+    color:#b7c6b2;
+    text-decoration: none;
+    font-family: var(--Lato);
+}
+
+.mb-7 .active{
+    background-color: #b7c6b2;
+    color: white ;
+}
+
+.mb-3{
+    color: #f5eefb;
+    font-family: var(--Lato);
+    text-decoration: none;
+}
+
+.mb-6{
+    font-family: var(--Spec);
+    color: #252525;
+    font-weight: bold;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 30px;
+    z-index: 99;
+}
+
+
+    .text-body px-2{
+        background-color: white;
+    }
+
+    .btn {
+        font-weight: 500;
+        transition: .5s;
+    }
+    
+    .btn.btn-primary,
+    .btn.btn-secondary {
+        color: grey;
+        background-color: #f5eefb;
+        border-color: #f5eefb;
+        font-weight: 100;
+        
+    }
+
+    .btn.btn-primary.py-2.px-4.d-none.d-lg-block{
+        outline: #f5eefb;
+        outline-color: #f5eefb;
+        outline-style: none;
+    }
+    
+    .btn-square {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .btn-sm-square {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .btn-lg-square {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .btn-square,
+    .btn-sm-square,
+    .btn-lg-square {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: normal;
+    }
+    
+    .btn-outline-body {
+        color: lavender;
+        border-color: aliceblue;
+        background-color: aliceblue;
+    }
+    
+    .btn-outline-body:hover {
+        color: #FFFFFF;
+        background: var(--primary);
+        border-color: var(--primary);
+    }
+
+    /*** Navbar ***/
+
+/*** inputs the down arrow next to the header ***/
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 6px;
+}
+
+/*** change the headers of the navbar to thinner font weight and seperate them more while also capatlising them**/ 
+.navbar .navbar-nav .nav-link {
+    margin-right: 30px;
+    padding: 30px 0;
+    color: var(--dark);
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+/** changes nav link to go darker when hovered over and also active page goes to the same dark colour **/
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active,
+.nav-link .dropdown-toggle .active {
+    color: #b7c6b2;
+    font-weight: 200;
+}
+
+
+
+@media (max-width: 991.98px) {
+    .navbar .navbar-nav .nav-link {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        top: 100%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+        transition: .5s;
+        opacity: 0;
+        font-weight: 200;
+        font-family: var(--Mont);
+    }
+
+    .dropdown-item{
+        color: #252525;
+        font-weight: 200;
+
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        transform: rotateX(0deg);
+        visibility: visible;
+        transition: 0.5s;
+        opacity: 1;
+        background-color:#e8f2e4;
+        font-weight: 200;
+    }
+}
+
+/*** Footer ***/
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: var(--primary);
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+    text-decoration: none;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--primary);
+    margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+    color: var(--primary);
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+
+.page-header {
+    background:#e8f2e4;
+    background-size: cover;
+    height: 250px;
+}
+
+.breadcrumb-item a{
+    color: white;
+    text-decoration: none;
+}
+
+
+.about-img,
+.feature-img {
+    position: relative;
+    height: 100%;
+    min-height: 400px;
+}
+
+.about-img img,
+.feature-img img {
+    position: absolute;
+    width: 60%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.about-img img:last-child,
+.feature-img img:last-child {
+    margin: 20% 0 0 40%;
+}
+
+.about-img::before,
+.feature-img::before {
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 80%;
+    top: 10%;
+    left: 20%;
+    border: 5px solid var(--primary);
+    z-index: -1;
+}
+
+.carousel-item{
+    height: 600px;
+}
+
+.carousel-caption{
+    color: aliceblue;
+    font-family: var(--Lato);
+}
+
+.card-item .bg-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.card-item .card-text {
+    background: var(--light);
+    transition: .5s;
+}
+
+.card-item:hover .card-text {
+    background: rgba(0, 0, 0, .7);
+}
+
+.card-item * {
+    transition: .5;
+}
+
+.card-item:hover * {
+    color: #FFFFFF;
+}
+
+.card-item .btn {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    color: var(--dark);
+    background: #FFFFFF;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card-item:hover .btn {
+    width: 140px;
+}
+
+
+
+.project .nav .nav-link {
+    background: #b7c6b2 ;
+    color:white;
+    transition: .5s;
+    font-family: var(--Mont);
+    font-weight: 400;
+}
+
+.project .nav .nav-link.active {
+    background: aliceblue;
+}
+
+.project .nav .nav-link.active h3 {
+    color:lavender;
+    font-weight: 400;
+    font-family: var(--Mont);
+}
+
+.team-items {
+    margin: -.75rem;
+}
+
+.team-item {
+    padding: .75rem;
+}
+
+.team-item::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background: #FFFFFF;
+    transition: .5s;
+    z-index: -1;
+}
+
+.team-item:hover::after {
+    height: 100%;
+    background: var(--primary);
+}
+
+.team-item .team-social {
+    position: absolute;
+    width: 100%;
+    bottom: -20px;
+    left: 0;
+}
+
+.team-item .team-social .btn {
+    display: inline-flex;
+    margin: 0 2px;
+    color: var(--primary);
+    background: var(--light);
+}
+
+.team-item .team-social .btn:hover {
+    color: #FFFFFF;
+    background: var(--primary);
+}
+
+.section {
+    padding-top: 30px;
+  }
+  
+  .section-row {
+    margin-bottom: 30px;
+  }
+  
+  .section-title {
+    position: relative;
+  }
+  
+  .section-title .title {
+    position: relative;
+    background-color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-right: 10px;
+  }
+  
+  .section-title:after {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 10px;
+    z-index: 10;
+  }
+
+.schedule-event{
+    font-family: var(--Mont);
+    color: grey;
+}
+
+.page-item :hover{
+    color: white;
+    background-color: #b7c6b2;
+}
+
+.page-item .active .page-link{
+    color: grey;
+    background-color: #f5eefb;
+}
+
+.page-link .active
+.page-item .active{
+    background-color: #f5eefb;
+    color: grey;
+}
+
+
+.service-item {
+    position: relative;
+    height: 300px;
+    padding: 0 30px;
+    transition: .5s;
+}
+
+.service-item .service-icon {
+    margin-bottom: 30px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    border-radius: 2px;
+    transform: rotate(-45deg);
+}
+
+.service-item .service-icon i {
+    transform: rotate(45deg);
+}
+
+.service-item a.btn {
+    position: absolute;
+    width: 60px;
+    bottom: -48px;
+    left: 50%;
+    margin-left: -30px;
+    opacity: 0;
+}
+
+.service-item:hover a.btn {
+    bottom: -24px;
+    opacity: 1;
+}
+
+.next-testimonial {
+    background-color: lavender;
+    height: 380px
+}
+
+.next-testimonial-bottom {
+    background-color: #f8f8f8;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    position: relative;
+    height: 130px;
+    top: 190px
+}
+
+.next-testimonial h3 {
+    color: var(--orange);
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase
+}
+
+.next-testimonial h2 {
+    color: white;
+    font-size: 28px;
+    font-weight: 700
+}
+
+.testimonial-inner {
+    position: relative;
+    top: -174px
+}
+
+.testimonial-pos {
+    position: relative;
+    top: 24px
+}
+
+.testimonial-inner .tour-desc {
+    border-radius: 5px;
+    padding: 40px
+}
+
+.color-grey-3 {
+    font-family: "Montserrat", Sans-serif;
+    font-size: 14px;
+    color: #6c83a2
+}
+
+.testimonial-inner img.tm-people {
+    width: 60px;
+    height: 60px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    max-width: none
+}
+
+.link-name {
+    font-family: "Montserrat", Sans-serif;
+    font-size: 14px;
+    color: #6c83a2
+}
+
+.link-position {
+    font-family: "Montserrat", Sans-serif;
+    font-size: 12px;
+    color: #6c83a2
+}
